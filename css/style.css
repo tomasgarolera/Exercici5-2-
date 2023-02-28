@@ -1,86 +1,71 @@
-.header{
-	width:100%;
-	max-width:900px;
-	margin:auto;
-   }
-  .h1{
-	font-family:Impact, Haettenschweiler;
-	font-size: 30px;
-  }
-  .caixa1 {
-	float: left;
-	width: 500px;
-	height: 450px;
-	padding: 10px 12px 14px 16px;
-	border-width: 2px;
-	border-style: dotted;
-	margin: 10px;
-  }
-  .caixa2 {
-	float: left;
-	background-color: #E5E5E5;
-	width: 500px;
-	height: 450px;
-	padding: 10px 12px 14px 16px;
-	border-width: 2px;
-	border-style: dotted;
-	margin: 10px;
-  }
-  nav{
-	position:relative;
-	top:100px;
-	margin:auto;
-  
-  }
-		
-  nav a{
-	text-decoration:none;
-	color:inherit;
-	font-size:14px;
-  }
-			
-  nav li{
-	display:inline-block;
-	width:150px;
-	height:30px;
-	padding:5px 10px;
-	border:1px solid #000;
-	text-align:center;
-	background-color:#000;
-	color:#fff;
-  }
-			
-  nav li:hover{
-	background-color:#fff;
-	color:#000;
-  }
-			
-  nav li>ul{
-  position:absolute;
-  left:0px;
-  top:30px;
-  display:block;
-  }
-			
-  nav li>ul{
-	display:none;
-  }            
-  
-  nav li:hover>ul{
-	display:block;
-  }
-  
-  
-  /*creació d'un botó per enllaçar a altres lloc o a altres llocs 
-  de la web*/
-  .boto {
-	border: 1px solid #525252; /*amplada, estil i color borde*/
-	padding: 10px; /*espacio al voltant del text*/
-	background-color: #525252; /*color botó*/
-	color: #ffffff; /*color text*/
-	text-decoration: none; /*decoració text*/
-	text-transform: uppercase; /*capitalizació text*/
-	font-family: 'Helvetica', sans-serif; /*tipografía text*/
-	border-radius: 0px; /*bordes rodons*/
-	float: right;
-	}
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	font-size: 1.2rem;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	display: block;
+	transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+	background-color: #fff;
+	color: #333;
+	border-radius: 5px;
+}
+
+/* Estilos para el menú desplegable */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	padding: 0;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+nav ul ul li {
+	display: block;
+	margin: 0;
+}
+
+nav ul ul a {
+	color: #333;
+	padding: 10px;
+	display: block;
+	font-size: 1rem;
+}
+
+nav ul ul a:hover {
+	background-color: #eee;
+	color: #333;
+	border-radius: 5px;
+}
